@@ -18,6 +18,7 @@ abstract class KaartItem : Tekenbaar {
         }
     }
 
+    public abstract char Karakter {get;}
     
 
 }

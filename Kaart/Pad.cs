@@ -2,6 +2,9 @@ class Pad : Tekenbaar {
 
     private float? lengteBerekend;
 
+    public Coordinaat van {set; get;}
+    public Coordinaat naar {set; get;}
+ 
     public float Lengte() {
         return 0;
     }
