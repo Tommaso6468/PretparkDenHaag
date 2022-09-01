@@ -21,7 +21,7 @@ class Pad : Tekenbaar {
     }
  
     public float Lengte() {
-        return 0;
+        return (float) Math.Sqrt((Math.Pow(naar.x - van.x, 2) + Math.Pow(naar.y - van.y, 2)));
     }
 
     public float Afstand(Coordinaat c) {

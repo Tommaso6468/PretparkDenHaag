@@ -4,7 +4,7 @@ class Starter {
         Kaart k = new Kaart(30, 30);
         Pad p1 = new Pad();
         p1.van = new Coordinaat(2, 5);
-        p1.van = new Coordinaat(12, 30);
+        p1.naar = new Coordinaat(12, 30);
         k.VoegPadToe(p1);
         Pad p2 = new Pad();
         p2.van = new Coordinaat(26, 4);
