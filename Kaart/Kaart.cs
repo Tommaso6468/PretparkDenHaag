@@ -10,8 +10,16 @@ class Kaart {
         this.Hoogte = hoogte;
     }
 
-    public void Teken(Tekener t) {
-
+    public void Teken() {
+        for (int i = 0; i < 100; i++) {
+            Console.WriteLine(" ");
+        }
+        foreach (var i in paden) {
+            i.TekenConsole();
+        }
+        foreach (var i in kaartItems) {
+            i.TekenConsole();
+        }
     }
 
     public void VoegItemToe(KaartItem item) {

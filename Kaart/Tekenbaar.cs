@@ -1,5 +1,3 @@
 interface Tekenbaar {
-    public void TekenConsole(ConsoleTekener t) {
-
-    }
+    public void TekenConsole();
 }

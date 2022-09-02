@@ -1,4 +1,4 @@
-abstract class KaartItem : Tekenbaar {
+abstract class KaartItem :Tekenbaar{
     private Coordinaat _locatie;
     private Kaart kaart;
 
@@ -7,8 +7,9 @@ abstract class KaartItem : Tekenbaar {
         this.kaart = kaart;
     }
 
-    public void TekenConsole(ConsoleTekener t) {
-
+    public void TekenConsole() {
+        Console.SetCursorPosition(this._locatie.x, this._locatie.y);
+	    Console.WriteLine(Karakter);
     }
 
     public Coordinaat Locatie { 
