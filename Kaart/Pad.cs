@@ -33,7 +33,7 @@ class Pad : Tekenbaar
 
     public float Lengte()
     {
-        float result = (float)Math.Sqrt((Math.Pow(naar.x - van.x , 2) + Math.Pow(naar.y - van.y, 2))) * 1000;
+        float result = (float)Math.Sqrt((Math.Pow(naar.x - van.x, 2) + Math.Pow(naar.y - van.y, 2))) * 1000;
         this.lengteBerekend = result;
         return result;
     }
@@ -63,7 +63,7 @@ class Pad : Tekenbaar
         for (; n > 0; --n)
         {
             Console.SetCursorPosition(x, y);
-	        Console.WriteLine("#");
+            Console.WriteLine("#");
 
             if (error > 0)
             {
@@ -77,10 +77,10 @@ class Pad : Tekenbaar
             }
         }
 
-        int avgX = (int) (van.x + naar.x) / 2;
-        int avgY = (int) (van.y + naar.y) / 2;
+        int avgX = (int)(van.x + naar.x) / 2;
+        int avgY = (int)(van.y + naar.y) / 2;
         Console.SetCursorPosition(avgX, avgY);
-	    Console.WriteLine(Lengte().metSuffixen());
+        Console.WriteLine(Lengte().metSuffixen());
     }
 
 }

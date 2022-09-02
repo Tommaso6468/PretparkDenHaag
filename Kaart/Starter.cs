@@ -1,6 +1,8 @@
-class Starter {
+class Starter
+{
 
-    public static void Main(string[] args) {
+    public static void Main(string[] args)
+    {
         Kaart k = new Kaart(30, 30);
         Pad p1 = new Pad();
         p1.van = new Coordinaat(2, 5);
