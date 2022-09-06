@@ -1,4 +1,4 @@
-interface Tekenbaar
-{
+interface Tekenbaar {
     public void TekenConsole();
+    
 }
