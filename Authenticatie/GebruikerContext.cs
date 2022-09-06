@@ -17,8 +17,8 @@ static class GebruikerContext {
         return null;
     }
 
-    public static Gebruiker NieuweGebruiker(string wachtwoord, string naam, string email, VerificatieToken vToken) {
-        Gebruiker g = new Gebruiker(naam,wachtwoord,email,vToken);
+    public static Gebruiker NieuweGebruiker(string wachtwoord, string naam, string email) {
+        Gebruiker g = new Gebruiker(naam,wachtwoord,email);
         gebruikers.Add(g);
         return g;
     }

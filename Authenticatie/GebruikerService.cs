@@ -2,9 +2,7 @@ static class GebruikerService {
 
     public static Gebruiker Registreer(string naam, string email, string wachtwoord) {
         if (GebruikerContext.GetGebruiker(email) != null) throw new Exception();
-        VerificatieToken vToken = new VerificatieToken();
-        EmailService.Email("Uw verificatie token is: " + vToken.token, email);
-        return GebruikerContext.NieuweGebruiker(wachtwoord,naam,email,vToken);
+        return GebruikerContext.NieuweGebruiker(wachtwoord,naam,email);
     }
 
     public static bool Login(string email, string wachtwoord) {

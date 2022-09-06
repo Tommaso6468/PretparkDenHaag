@@ -4,19 +4,20 @@ class Gebruiker {
     public string? Naam {get; set;}
     public string? Email {get; set;}
 
-    private VerificatieToken? vToken;
+    private VerificatieToken vToken = new VerificatieToken();
 
-    public Gebruiker(string naam, string wachtwoord, string email, VerificatieToken vToken) {
+    public Gebruiker(string naam, string wachtwoord, string email) {
         this.Naam = naam;
         this.Wachtwoord = wachtwoord;
         this.Email = email;
-        this.vToken = vToken;
     }
 
     public void ClearToken() {
         if (vToken != null) {
             this.vToken.ResetToken();
+            EmailService.Email("Uw verificatie token is: " + vToken.token, Email);
         }
+        
     }
 
     public VerificatieToken GetToken() {
