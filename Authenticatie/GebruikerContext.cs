@@ -1,23 +1,23 @@
-static class GebruikerContext {
+class GebruikerContext : IGebruikersContext {
 
     private static List<Gebruiker> gebruikers = new List<Gebruiker>();
 
-    public static int AantalGebruikers() {
+    public int AantalGebruikers() {
         return gebruikers.Count();
     }
 
-    public static Gebruiker GetGebruiker(int i) {
+    public Gebruiker GetGebruiker(int i) {
         return gebruikers[i];
     }
 
-    public static Gebruiker GetGebruiker(string email) {
+    public Gebruiker GetGebruiker(string email) {
         for (var i = 0; i < gebruikers.Count; i++) {
             if (gebruikers[i].Email == email) return gebruikers[i]; 
         }
         return null;
     }
 
-    public static Gebruiker NieuweGebruiker(string wachtwoord, string naam, string email) {
+    public Gebruiker NieuweGebruiker(string wachtwoord, string naam, string email) {
         Gebruiker g = new Gebruiker(naam,wachtwoord,email);
         gebruikers.Add(g);
         return g;

@@ -1,5 +1,7 @@
 class Gebruiker {
 
+    private IEmailService eService = new EmailService();
+
     public string? Wachtwoord {get; set;}
     public string? Naam {get; set;}
     public string? Email {get; set;}
@@ -15,7 +17,7 @@ class Gebruiker {
     public void ClearToken() {
         if (vToken != null) {
             this.vToken.ResetToken();
-            EmailService.Email("Uw verificatie token is: " + vToken.token, Email);
+            eService.Email("Uw verificatie token is: " + vToken.token, Email);
         }
         
     }

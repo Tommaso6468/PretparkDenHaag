@@ -1,6 +1,6 @@
-class EmailService {
+class EmailService : IEmailService {
 
-    public static void Email(string tekst, string naarAdres) {
+    public void Email(string tekst, string naarAdres) {
         Console.WriteLine("Aan: " + naarAdres);
         Console.WriteLine();
         Console.WriteLine(tekst);

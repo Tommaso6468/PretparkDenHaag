@@ -1,13 +1,15 @@
-static class GebruikerService {
+class GebruikerService : IGebruikerService {
 
-    public static Gebruiker Registreer(string naam, string email, string wachtwoord) {
-        if (GebruikerContext.GetGebruiker(email) != null) throw new Exception();
-        return GebruikerContext.NieuweGebruiker(wachtwoord,naam,email);
+    private IGebruikersContext gContext = new GebruikerContext();
+
+    public Gebruiker Registreer(string naam, string email, string wachtwoord) {
+        if (gContext.GetGebruiker(email) != null) throw new Exception();
+        return gContext.NieuweGebruiker(wachtwoord,naam,email);
     }
 
-    public static bool Login(string email, string wachtwoord) {
+    public bool Login(string email, string wachtwoord) {
 
-        Gebruiker? g = GebruikerContext.GetGebruiker(email);
+        Gebruiker? g = gContext.GetGebruiker(email);
 
         if (g == null) return false;
         if (g.Wachtwoord != wachtwoord) return false;
@@ -16,9 +18,9 @@ static class GebruikerService {
         return true;
     }
 
-    public static bool Verifieer(string email, string token) {
+    public bool Verifieer(string email, string token) {
 
-        Gebruiker? g = GebruikerContext.GetGebruiker(email);
+        Gebruiker? g = gContext.GetGebruiker(email);
 
         if (g == null) return false;
         if (g.GetToken() == null) return false;
