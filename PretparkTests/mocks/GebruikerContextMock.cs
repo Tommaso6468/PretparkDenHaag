@@ -1,6 +1,11 @@
-class GebruikerContext : IGebruikersContext {
+using System.Collections.Generic;
+using System.Linq;
+using Pretpark;
 
-    private static List<Gebruiker> gebruikers = new List<Gebruiker>();
+namespace PretparkTests;
+public class GebruikerContextMock : IGebruikerContext {
+    
+    public static List<Gebruiker> gebruikers {get; set;} = new List<Gebruiker>();
 
     public int AantalGebruikers() {
         return gebruikers.Count();

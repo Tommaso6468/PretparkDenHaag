@@ -1,4 +1,5 @@
-class Starter
+namespace Pretpark;
+public class Starter
 {
 
     public static void Main(string[] args)

@@ -1,4 +1,8 @@
-class Kaart
+using System;
+using System.Collections.Generic;
+
+namespace Pretpark;
+public class Kaart
 {
     public readonly int Breedte;
     public readonly int Hoogte;

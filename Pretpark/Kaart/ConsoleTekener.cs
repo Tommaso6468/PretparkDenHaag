@@ -1,4 +1,7 @@
-class ConsoleTekener
+using System;
+
+namespace Pretpark;
+public class ConsoleTekener
 {
     public void Teken()
     {

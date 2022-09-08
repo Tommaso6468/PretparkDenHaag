@@ -1,4 +1,7 @@
-abstract class KaartItem : Tekenbaar
+using System;
+
+namespace Pretpark;
+public abstract class KaartItem : Tekenbaar
 {
     private Coordinaat _locatie;
     private Kaart kaart;

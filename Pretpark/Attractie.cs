@@ -1,4 +1,5 @@
-class Attractie : KaartItem
+namespace Pretpark;
+public class Attractie : KaartItem
 {
     private int? _minimaleLengte;
     private int _angstLevel;

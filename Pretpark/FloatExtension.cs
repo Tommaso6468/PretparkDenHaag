@@ -1,4 +1,5 @@
-static class FloatExtension
+namespace Pretpark;
+public static class FloatExtension
 {
 
     public static string metSuffixen(this float num)

@@ -1,4 +1,7 @@
-class Pad : Tekenbaar
+using System;
+
+namespace Pretpark;
+public class Pad : Tekenbaar
 {
 
     private float? lengteBerekend;

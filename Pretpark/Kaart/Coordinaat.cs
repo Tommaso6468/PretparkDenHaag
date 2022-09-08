@@ -1,4 +1,5 @@
-struct Coordinaat
+namespace Pretpark;
+public struct Coordinaat
 {
 
     public readonly int x;
