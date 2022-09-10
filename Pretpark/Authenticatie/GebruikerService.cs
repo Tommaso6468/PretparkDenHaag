@@ -15,8 +15,8 @@ public class GebruikerService
 
     public Gebruiker Registreer(string naam, string email, string wachtwoord)
     {
-        if (gContext.GetGebruiker(email) != null) throw new Exception();
-        Gebruiker g = gContext.NieuweGebruiker(wachtwoord, naam, email);
+        if (gContext.GetGebruiker(email) != null) return null;
+        Gebruiker g = gContext.NieuweGebruiker(naam, email, wachtwoord);
         eService.Email("Uw verificatie token is: " + g.GetToken(), email);
         return g;
     }
@@ -51,6 +51,7 @@ public class GebruikerService
             return false;
         }
 
+        g.ClearToken();
         return true;
     }
 

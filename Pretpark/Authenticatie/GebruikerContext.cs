@@ -7,7 +7,7 @@ namespace Pretpark;
 public class GebruikerContext : IGebruikerContext
 {
 
-    private static List<Gebruiker> gebruikers = new List<Gebruiker>();
+    private List<Gebruiker> gebruikers = new List<Gebruiker>();
 
     public int AantalGebruikers()
     {
@@ -28,9 +28,9 @@ public class GebruikerContext : IGebruikerContext
         return null;
     }
 
-    public Gebruiker NieuweGebruiker(string wachtwoord, string naam, string email)
+    public Gebruiker NieuweGebruiker(string naam, string email, string wachtwoord)
     {
-        Gebruiker g = new Gebruiker(naam, wachtwoord, email);
+        Gebruiker g = new Gebruiker(naam, email, wachtwoord);
         gebruikers.Add(g);
         return g;
     }

@@ -9,7 +9,7 @@ public class Gebruiker
 
     private VerificatieToken vToken = new VerificatieToken();
 
-    public Gebruiker(string naam, string wachtwoord, string email)
+    public Gebruiker(string naam, string email, string wachtwoord)
     {
         this.Naam = naam;
         this.Wachtwoord = wachtwoord;
@@ -18,14 +18,11 @@ public class Gebruiker
 
     public void ClearToken()
     {
-        if (vToken != null)
-        {
-            this.vToken.ResetToken();
-        }
+        vToken = null;
 
     }
 
-    public VerificatieToken GetToken()
+    public VerificatieToken? GetToken()
     {
         if (vToken != null)
         {
