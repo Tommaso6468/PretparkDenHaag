@@ -14,7 +14,7 @@ public class GebruikerService_Test
         IGebruikerContext gebruikerContext = new GebruikerContextMock();
         GebruikerService gebruikerService = new GebruikerService(gebruikerContext, emailService);
 
-        Assert.NotNull(gebruikerService.Registreer("frits", "frits@gmail.com", "12345"));
+        Assert.NotNull(gebruikerService.Registreer("marty", "marty@gmail.com", "88mph"));
 
     }
 
@@ -50,7 +50,7 @@ public class GebruikerService_Test
         gebruikerContext.gebruikers = new List<Gebruiker>() { new Gebruiker("marty", "marty@gmail.com", "88mph") };
         GebruikerService gebruikerService = new GebruikerService(gebruikerContext, emailService);
 
-        Assert.False(gebruikerService.Login("marty@gmail.com", "90mph"));
+        Assert.False(gebruikerService.Login("marty@gmail.com", "12345"));
     }
 
     [Fact]

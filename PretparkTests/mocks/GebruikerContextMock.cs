@@ -13,12 +13,12 @@ public class GebruikerContextMock : IGebruikerContext
         return gebruikers.Count();
     }
 
-    public Gebruiker GetGebruiker(int i)
+    public Gebruiker? GetGebruiker(int i)
     {
         return gebruikers[i];
     }
 
-    public Gebruiker GetGebruiker(string email)
+    public Gebruiker? GetGebruiker(string email)
     {
         for (var i = 0; i < gebruikers.Count; i++)
         {
